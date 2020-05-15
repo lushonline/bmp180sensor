@@ -1,0 +1,14 @@
+{
+  "all": true,
+  "include": [
+    "src**/*.js"
+  ],
+  "exclude": [
+    "*.js",
+    "dist/**/*.js",
+    "test/**/*.js",
+    ".eslintrc.js",
+    "coverage",
+    ".github"
+  ]
+}

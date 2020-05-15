@@ -1,0 +1,10 @@
+arch:
+  - arm64
+language: node_js
+node_js:
+  - '12'
+  - '13'
+  - 'lts/*'
+os:
+  - linux
+dist: xenial

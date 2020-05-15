@@ -1,0 +1,67 @@
+{
+  "name": "bmp180sensor",
+  "version": "0.0.0",
+  "description": "I2C Driver for the BMP180 pressure and temperature sensor",
+  "main": "src/bmp180sensor.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "doc": "rimraf doc/* && jsdoc --readme README.md --configure jsdoc.json .",
+    "mocha": "node ./node_modules/mocha/bin/mocha \"test/**/*.js\"",
+    "pretest": "npm run lint",
+    "test": "npm run mocha",
+    "posttest": "npm run doc",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags && npm run changelog && git push ",
+    "changelog": "rimraf CHANGELOG.md && auto-changelog --template keepachangelog && git add . && git commit . -m changelog && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lushonline/bmp180sensor.git"
+  },
+  "engines": {
+    "node": ">=11.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "delay": "^4.3.0",
+    "i2c-bus": "^5.2.0",
+    "lodash": "^4.17.15",
+    "promise-retry": "^1.1.1",
+    "uuidv4": "^6.0.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.9.5",
+    "auto-changelog": "^1.16.4",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "docdash": "^1.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jsdoc": "^3.6.4",
+    "mocha": "^7.1.2",
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2"
+  },
+  "keywords": [
+    "bmp180",
+    "temperature",
+    "pressure",
+    "sensor",
+    "iot",
+    "i2c",
+    "raspberry",
+    "raspi",
+    "rpi",
+    "pi"
+  ],
+  "author": {
+    "name": "lushonline",
+    "email": "56685070+lushonline@users.noreply.github.com"
+  },
+  "license": "MIT"
+}
