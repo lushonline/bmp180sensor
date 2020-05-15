@@ -1,6 +1,6 @@
 {
   "name": "bmp180sensor",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "I2C Driver for the BMP180 pressure and temperature sensor",
   "main": "src/bmp180sensor.js",
   "scripts": {
